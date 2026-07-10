@@ -27,7 +27,37 @@
   <body>
     <header class="site-header" data-header>
       <a class="logo" href="#hero" aria-label="SmartShadeトップへ">SmartShade</a>
-      <a class="outline-cta" href="#reserve">無料現地調査を予約する</a>
+      <div class="header-actions">
+        <a class="outline-cta" href="#reserve">無料現地調査を予約する</a>
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-label="セクションメニューを開く"
+          aria-expanded="false"
+          aria-controls="section-menu"
+          data-menu-toggle
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+      <nav class="section-menu" id="section-menu" aria-label="セクションメニュー" data-section-menu>
+        <a href="#hero">トップ</a>
+        <a href="#space">一流の空間</a>
+        <a href="#switch">スイッチ体験</a>
+        <a href="#values">4つの強み</a>
+        <a href="#moment">THE MOMENT</a>
+        <a href="#comparison">比較</a>
+        <a href="#benefits">隠れた便益</a>
+        <a href="#reliability">製品信頼</a>
+        <a href="#craftsmanship">施工の信頼</a>
+        <a href="#installation">導入の手軽さ</a>
+        <a href="#usecases">利用シーン</a>
+        <a href="#pricing">価格</a>
+        <a href="#process">流れ・FAQ</a>
+        <a href="#reserve">無料現地調査</a>
+      </nav>
     </header>
 
     <main>
@@ -80,8 +110,11 @@
             <button class="wall-switch" type="button" aria-pressed="true" data-toggle>
               <span class="switch-label">SMARTSHADE</span>
               <span class="switch-track">
+                <span class="switch-side switch-side-on">ON</span>
+                <span class="switch-side switch-side-off">OFF</span>
                 <span class="switch-lever"></span>
               </span>
+              <span class="switch-action">押して切替</span>
             </button>
             <p class="state-text" data-state-text>透明 — 圧迫感なく、空間を広く</p>
             <div class="metrics">
@@ -173,7 +206,7 @@
       <section class="section" id="comparison">
         <div class="container reveal">
           <p class="eyebrow">COMPARISON</p>
-          <h2>ブラインド・すりガラスと、何が違うか</h2>
+          <h2>SmartShadeはここが違う</h2>
           <div class="compare-wrap">
             <table class="comparison-table">
               <thead>

@@ -2,6 +2,8 @@ const header = document.querySelector("[data-header]");
 const mobileCta = document.querySelector("[data-mobile-cta]");
 const reserveSection = document.querySelector("[data-reserve]");
 const revealItems = document.querySelectorAll(".reveal");
+const menuToggle = document.querySelector("[data-menu-toggle]");
+const sectionMenu = document.querySelector("[data-section-menu]");
 
 const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
@@ -17,6 +19,33 @@ const revealObserver = new IntersectionObserver(
 );
 
 revealItems.forEach((item) => revealObserver.observe(item));
+
+const closeMenu = () => {
+  header?.classList.remove("is-menu-open");
+  sectionMenu?.classList.remove("is-open");
+  menuToggle?.setAttribute("aria-expanded", "false");
+};
+
+menuToggle?.addEventListener("click", () => {
+  const willOpen = menuToggle.getAttribute("aria-expanded") !== "true";
+  header?.classList.toggle("is-menu-open", willOpen);
+  sectionMenu?.classList.toggle("is-open", willOpen);
+  menuToggle.setAttribute("aria-expanded", String(willOpen));
+});
+
+sectionMenu?.addEventListener("click", (event) => {
+  if (event.target.closest("a")) closeMenu();
+});
+
+document.addEventListener("click", (event) => {
+  if (!sectionMenu?.classList.contains("is-open")) return;
+  if (event.target.closest("[data-header]")) return;
+  closeMenu();
+});
+
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Escape") closeMenu();
+});
 
 const switchVisual = document.querySelector("[data-smart-switch]");
 const switchButton = document.querySelector("[data-toggle]");
