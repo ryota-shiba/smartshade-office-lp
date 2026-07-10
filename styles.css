@@ -746,21 +746,40 @@ h3 {
   padding-right: 24px;
 }
 
-.benefit-grid svg {
-  width: 96px;
-  height: 96px;
-  margin-bottom: 28px;
-  fill: none;
-  stroke: var(--navy);
-  stroke-linecap: round;
-  stroke-linejoin: round;
-  stroke-width: 1.5;
-  stroke-dasharray: 260;
-  stroke-dashoffset: 260;
+.benefit-icon {
+  display: grid;
+  place-items: center;
+  width: 168px;
+  height: 168px;
+  margin-bottom: 26px;
+  overflow: hidden;
+  border: 1px solid rgba(27, 42, 74, 0.08);
+  background: #f8f6f0;
 }
 
-.is-visible .benefit-grid svg {
-  animation: draw 1.2s var(--ease) forwards;
+.benefit-icon img {
+  width: 145%;
+  max-width: none;
+  mix-blend-mode: multiply;
+  transform: scale(1.08);
+  transition: transform 1.2s var(--ease), opacity 1.2s var(--ease);
+}
+
+.benefit-icon-heat {
+  background: #f7f4eb;
+}
+
+.benefit-icon-uv {
+  background: #f8f5f1;
+}
+
+.benefit-icon-safety {
+  background: #f3f6f8;
+}
+
+.is-visible .benefit-icon img {
+  opacity: 1;
+  transform: scale(1);
 }
 
 .benefit-grid p {
@@ -1506,6 +1525,12 @@ details p {
 
   .metrics {
     display: grid;
+  }
+
+  .benefit-icon {
+    width: 148px;
+    height: 148px;
+    margin-bottom: 20px;
   }
 
   .place-options,
