@@ -85,6 +85,7 @@ h3 {
 
 h2 {
   font-size: clamp(30px, 4.2vw, 52px);
+  text-wrap: balance;
 }
 
 h3 {
@@ -95,6 +96,10 @@ h3 {
   margin: 18px 0 0;
   color: var(--text-muted);
   font-size: 18px;
+}
+
+.mobile-break {
+  display: none;
 }
 
 .site-header {
@@ -729,6 +734,82 @@ h3 {
 
 .comparison-table td:last-child strong {
   color: var(--gold);
+}
+
+.mobile-comparison {
+  display: none;
+}
+
+.mobile-compare-card {
+  padding: 22px;
+  border: 1px solid var(--line);
+  background: var(--white);
+}
+
+.mobile-compare-card + .mobile-compare-card {
+  margin-top: 14px;
+}
+
+.mobile-compare-card h3 {
+  font-size: 22px;
+  line-height: 1.45;
+}
+
+.smart-result {
+  margin-top: 16px;
+  padding: 18px;
+  background: var(--navy);
+  color: var(--white);
+}
+
+.smart-result span {
+  display: block;
+  margin-bottom: 5px;
+  color: var(--gold);
+  font-family: "Cormorant Garamond", serif;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+.smart-result strong {
+  color: var(--gold);
+  font-size: 22px;
+  line-height: 1.4;
+}
+
+.legacy-results {
+  display: grid;
+  margin: 12px 0 0;
+  border: 1px solid var(--line);
+  border-bottom: 0;
+}
+
+.legacy-results div {
+  display: grid;
+  grid-template-columns: 96px 1fr;
+  border-bottom: 1px solid var(--line);
+}
+
+.legacy-results dt,
+.legacy-results dd {
+  margin: 0;
+  padding: 11px 12px;
+  line-height: 1.45;
+}
+
+.legacy-results dt {
+  background: #fafaf8;
+  color: var(--text-muted);
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.legacy-results dd {
+  color: var(--navy);
+  font-weight: 500;
 }
 
 .quiet {
@@ -1390,6 +1471,11 @@ details p {
     padding: 64px 0;
   }
 
+  h2 {
+    font-size: clamp(30px, 6.8vw, 42px);
+    line-height: 1.42;
+  }
+
   .site-header {
     padding: 18px 20px;
   }
@@ -1456,6 +1542,15 @@ details p {
     overflow-x: auto;
   }
 
+  .compare-wrap {
+    display: none;
+  }
+
+  .mobile-comparison {
+    display: block;
+    margin-top: 26px;
+  }
+
   .comparison-table th:first-child,
   .comparison-table td:first-child {
     position: sticky;
@@ -1479,6 +1574,15 @@ details p {
 @media (max-width: 560px) {
   .container {
     width: min(100% - 28px, 1120px);
+  }
+
+  h2 {
+    font-size: 30px;
+    line-height: 1.45;
+  }
+
+  .mobile-break {
+    display: block;
   }
 
   .hero-content {
