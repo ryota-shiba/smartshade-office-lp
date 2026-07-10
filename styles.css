@@ -54,7 +54,11 @@ textarea {
 }
 
 .section {
-  padding: 120px 0;
+  padding: 78px 0;
+}
+
+.full-photo {
+  padding-top: 0;
 }
 
 .eyebrow {
@@ -392,8 +396,8 @@ h3 {
 .split-copy {
   display: grid;
   grid-template-columns: 1.1fr 0.9fr;
-  gap: 80px;
-  padding-top: 72px;
+  gap: 56px;
+  padding-top: 48px;
 }
 
 .split-copy p:last-child {
@@ -411,8 +415,8 @@ h3 {
   position: relative;
   display: grid;
   grid-template-columns: 1fr;
-  gap: 32px;
-  margin-top: 58px;
+  gap: 24px;
+  margin-top: 40px;
 }
 
 .switch-visual {
@@ -557,7 +561,7 @@ h3 {
 }
 
 .value-list {
-  margin-top: 44px;
+  margin-top: 30px;
 }
 
 .value-item {
@@ -565,7 +569,7 @@ h3 {
   display: grid;
   grid-template-columns: 88px 1fr;
   gap: 24px;
-  padding: 30px 20px;
+  padding: 22px 20px;
   opacity: 0;
   transform: translateY(14px);
   transition: opacity 0.9s var(--ease), transform 0.9s var(--ease), background 0.3s var(--ease);
@@ -625,7 +629,7 @@ h3 {
 .moment-grid {
   display: grid;
   grid-template-columns: 0.9fr 1.1fr;
-  gap: 72px;
+  gap: 48px;
   align-items: center;
 }
 
@@ -642,8 +646,8 @@ h3 {
 
 .steps {
   display: grid;
-  gap: 28px;
-  margin-top: 44px;
+  gap: 22px;
+  margin-top: 30px;
 }
 
 .moment-step {
@@ -681,8 +685,8 @@ h3 {
 
 .moment-close {
   width: min(900px, calc(100% - 40px));
-  margin: 88px auto 0;
-  padding-top: 42px;
+  margin: 56px auto 0;
+  padding-top: 30px;
   border-top: 1px solid var(--line);
   color: var(--navy);
   font-family: "Shippori Mincho", serif;
@@ -692,7 +696,7 @@ h3 {
 }
 
 .compare-wrap {
-  margin-top: 44px;
+  margin-top: 30px;
   overflow-x: auto;
 }
 
@@ -705,7 +709,7 @@ h3 {
 
 .comparison-table th,
 .comparison-table td {
-  padding: 24px 18px;
+  padding: 18px 16px;
   border: 1px solid var(--line);
   text-align: left;
   vertical-align: middle;
@@ -734,8 +738,8 @@ h3 {
 .benefit-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 48px;
-  margin-top: 52px;
+  gap: 36px;
+  margin-top: 36px;
 }
 
 .benefit-grid article {
@@ -767,9 +771,9 @@ h3 {
 .reliability-grid {
   display: grid;
   grid-template-columns: 0.9fr 1.1fr;
-  gap: 58px;
+  gap: 42px;
   align-items: stretch;
-  margin-top: 40px;
+  margin-top: 30px;
 }
 
 .reliability figure {
@@ -796,7 +800,7 @@ h3 {
 }
 
 .spec-grid div {
-  padding: 54px 38px;
+  padding: 40px 30px;
   border: 1px solid var(--line);
 }
 
@@ -820,8 +824,8 @@ h3 {
 }
 
 .spec-band {
-  margin: 44px 0 0;
-  padding-top: 28px;
+  margin: 32px 0 0;
+  padding-top: 22px;
   border-top: 1px solid var(--line);
   color: var(--text-muted);
   font-size: 14px;
@@ -838,13 +842,13 @@ h3 {
 }
 
 .craftsmanship {
-  padding: 180px 0;
+  padding: 112px 0;
   text-align: center;
 }
 
 .craftsmanship p:not(.eyebrow) {
   max-width: 850px;
-  margin: 32px auto 0;
+  margin: 24px auto 0;
   color: rgba(255, 255, 255, 0.84);
 }
 
@@ -856,7 +860,7 @@ h3 {
 }
 
 .days {
-  margin: 52px 0;
+  margin: 36px 0;
   color: var(--navy);
   font-family: "Shippori Mincho", serif;
   font-size: clamp(28px, 4vw, 48px);
@@ -896,8 +900,8 @@ h3 {
 .use-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 28px;
-  margin-top: 44px;
+  gap: 22px;
+  margin-top: 32px;
 }
 
 .use-grid article {
@@ -953,7 +957,7 @@ h3 {
 
 .price-cards {
   grid-template-columns: repeat(3, 1fr);
-  margin-top: 44px;
+  margin-top: 32px;
 }
 
 .price-cards p {
@@ -975,7 +979,7 @@ h3 {
 }
 
 .simulator {
-  margin-top: 52px;
+  margin-top: 38px;
   padding: clamp(26px, 4vw, 48px);
 }
 
@@ -984,7 +988,7 @@ h3 {
 }
 
 .sim-step + .sim-step {
-  margin-top: 34px;
+  margin-top: 26px;
 }
 
 .sim-step > p {
@@ -1043,8 +1047,8 @@ h3 {
   display: grid;
   justify-items: start;
   gap: 12px;
-  margin-top: 34px;
-  padding-top: 28px;
+  margin-top: 26px;
+  padding-top: 22px;
   border-top: 1px solid var(--line);
 }
 
@@ -1072,7 +1076,7 @@ h3 {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   gap: 10px;
-  margin: 44px 0 20px;
+  margin: 32px 0 16px;
 }
 
 .process-bar span {
@@ -1101,7 +1105,7 @@ h3 {
 .faq-list {
   display: grid;
   gap: 12px;
-  margin-top: 42px;
+  margin-top: 30px;
 }
 
 details {
@@ -1144,7 +1148,7 @@ details p {
 }
 
 .final-cta {
-  padding: 150px 0;
+  padding: 96px 0;
 }
 
 .promise {
@@ -1157,7 +1161,7 @@ details p {
   display: grid;
   grid-template-columns: 1fr 0.42fr;
   gap: 36px;
-  margin-top: 48px;
+  margin-top: 36px;
 }
 
 .reserve-form {
@@ -1364,7 +1368,7 @@ details p {
 
 @media (max-width: 900px) {
   .section {
-    padding: 96px 0;
+    padding: 64px 0;
   }
 
   .site-header {
@@ -1487,11 +1491,11 @@ details p {
   }
 
   .wide-photo img {
-    height: 68vh;
+    height: 54vh;
   }
 
   .split-copy {
-    gap: 28px;
+    gap: 22px;
   }
 
   .value-item,
@@ -1511,12 +1515,12 @@ details p {
   }
 
   .spec-grid div {
-    padding: 34px 24px;
+    padding: 28px 22px;
   }
 
   .craftsmanship,
   .final-cta {
-    padding: 120px 0;
+    padding: 78px 0;
   }
 
   .footer nav {
