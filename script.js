@@ -131,9 +131,9 @@ const unitPrice = 107100;
 const height = 2.5;
 
 const updateEstimate = () => {
-  const placeButtons = [...document.querySelectorAll("[data-place].is-selected")];
+  const selectedPlace = document.querySelector("[data-place].is-selected");
   const width = Number(document.querySelector("[data-width].is-selected")?.dataset.width || 1.6);
-  const multiplier = placeButtons.reduce((sum, button) => sum + Number(button.dataset.place), 0);
+  const multiplier = Number(selectedPlace?.dataset.place || 1);
   const price = unitPrice * height * width * Math.max(multiplier, 1);
   const band = Math.floor(price / 100000) * 10;
   result.style.opacity = "0";
@@ -147,9 +147,8 @@ simulator?.addEventListener("click", (event) => {
   const place = event.target.closest("[data-place]");
   const widthButton = event.target.closest("[data-width]");
   if (place) {
-    place.classList.toggle("is-selected");
-    const selectedPlaces = document.querySelectorAll("[data-place].is-selected");
-    if (!selectedPlaces.length) place.classList.add("is-selected");
+    document.querySelectorAll("[data-place]").forEach((button) => button.classList.remove("is-selected"));
+    place.classList.add("is-selected");
     updateEstimate();
   }
   if (widthButton) {

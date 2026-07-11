@@ -953,6 +953,18 @@ h3 {
   color: rgba(255, 255, 255, 0.84);
 }
 
+.craft-image {
+  max-width: 960px;
+  margin: 36px auto 0;
+  overflow: hidden;
+}
+
+.craft-image img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+
 .craftsmanship .craft-close {
   color: var(--gold);
   font-family: "Shippori Mincho", serif;
@@ -1052,6 +1064,14 @@ h3 {
   display: none;
 }
 
+.scroll-cue {
+  display: none;
+}
+
+.is-temporarily-hidden {
+  display: none !important;
+}
+
 .pricing h2 span {
   color: var(--gold);
 }
@@ -1146,11 +1166,12 @@ h3 {
 
 .result {
   display: grid;
-  justify-items: start;
+  justify-items: center;
   gap: 12px;
   margin-top: 26px;
   padding-top: 22px;
   border-top: 1px solid var(--line);
+  text-align: center;
 }
 
 .result p {
@@ -1167,6 +1188,11 @@ h3 {
 
 .result span {
   color: var(--text-muted);
+}
+
+.estimate-cta {
+  margin-top: 8px;
+  color: var(--navy-deep);
 }
 
 .dark-link {
@@ -1445,6 +1471,18 @@ details p {
   }
 }
 
+@keyframes cueLeft {
+  50% {
+    transform: translateX(-5px);
+  }
+}
+
+@keyframes cueRight {
+  50% {
+    transform: translateX(5px);
+  }
+}
+
 @keyframes draw {
   to {
     stroke-dashoffset: 0;
@@ -1550,21 +1588,36 @@ details p {
   }
 
   .dots {
+    display: none;
+  }
+
+  .scroll-cue {
     display: flex;
+    align-items: center;
     justify-content: center;
-    gap: 8px;
-    margin-top: 10px;
+    gap: 14px;
+    margin-top: 14px;
+    color: var(--text-muted);
+    font-family: "Cormorant Garamond", serif;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
   }
 
-  .dots span {
-    width: 7px;
-    height: 7px;
-    border-radius: 50%;
-    background: var(--line);
+  .scroll-arrow {
+    color: var(--gold);
+    font-family: "Noto Sans JP", sans-serif;
+    font-size: 18px;
+    letter-spacing: 0;
   }
 
-  .dots span:first-child {
-    background: var(--gold);
+  .scroll-arrow-left {
+    animation: cueLeft 1.4s infinite var(--ease);
+  }
+
+  .scroll-arrow-right {
+    animation: cueRight 1.4s infinite var(--ease);
   }
 
   .process-bar {
