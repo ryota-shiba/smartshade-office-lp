@@ -1523,6 +1523,15 @@ details p {
     grid-template-columns: 1fr;
   }
 
+  .benefit-grid article {
+    padding-right: 0;
+  }
+
+  .benefit-icon {
+    margin-right: auto;
+    margin-left: auto;
+  }
+
   .place-options {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -1600,6 +1609,8 @@ details p {
   h2 {
     font-size: 30px;
     line-height: 1.45;
+    word-break: keep-all;
+    overflow-wrap: normal;
   }
 
   .mobile-break {
@@ -1656,6 +1667,12 @@ details p {
     width: 148px;
     height: 148px;
     margin-bottom: 20px;
+  }
+
+  .benefit-grid h3 {
+    line-height: 1.45;
+    word-break: keep-all;
+    overflow-wrap: normal;
   }
 
   .place-options,
