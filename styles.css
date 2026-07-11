@@ -59,7 +59,7 @@ textarea {
 }
 
 .full-photo {
-  padding-top: 0;
+  padding-top: clamp(30px, 4vw, 52px);
 }
 
 .eyebrow {
